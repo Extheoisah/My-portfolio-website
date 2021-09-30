@@ -118,6 +118,88 @@ nav .social__links .nav__list {
   display: none;
 }
 
+/* === About Section === */
+section.about {
+  position: relative;
+}
+.profile__pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--pry-clr);
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+.profile__pic img {
+  /* border: 1px solid red; */
+  height: 90vh;
+}
+
+section.about .description {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  right: 15%;
+  text-align: center;
+  color: var(--pry-clr);
+}
+
+section.about .description h2 {
+  font-size: calc(var(--fs-big) + 5px);
+  font-weight: 800;
+  color: var(--pry-clr);
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+  transition: ease-in 0.25s;
+}
+
+section.about .description p {
+  font-size: calc(var(--normal-font-size) + 6px);
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--btn-clr);
+  background-color: var(--pry-clr);
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  border: none;
+  /* border-radius: 6px; */
+  outline: none;
+  transition: ease-in-out 1s;
+}
+
+section.about .description .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+section.about .description .link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+}
+
+section.about .description .link .more {
+  background-color: var(--pry-clr);
+  color: var(--btn-clr);
+  font-weight: 600;
+}
+
+section.about .description .link .hire {
+  background-color: var(--cedar-chest);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.fa-angle-double-right {
+  margin-left: 0.5rem;
+  font-size: var(--small-font-size);
+  /* font-weight: 400; */
+}
+
 /* === MEDIA QUERIES === */
 
 @media screen and (max-width: 768px) {
