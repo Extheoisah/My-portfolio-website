@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --header-height: 3rem;
+
+  /* font-size */
+  --fs-big: 2rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /* z-index */
+  --z-fixed: 100;
+
+  /* === Colors === */
+  --white: #fff;
+  --pry-clr: #fbdbb4;
+  --btn-clr: #1f3469;
+  --accent-clr: #7daa92;
+  --accent-2: #bd9e7f;
+  --cedar-chest: #d04e42;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --normal-font-size: 1.375rem;
+    --small-font-size: 0.95rem;
+  }
+}
+
+header .logo,
+.nav__name {
+  font-family: "Birthstone Bounce", cursive;
+  font-weight: 500;
+  font-size: var(--normal-font-size);
+  letter-spacing: 1px;
+  color: var(--btn-clr);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  padding: var(--header-height);
+  /* border: 1px solid red; */
+  background-color: var(--pry-clr);
+}
+
+header .logo {
+  display: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav__menu .nav__list,
+nav .social__links .nav__list {
+  display: inline-flex;
+}
+
+.nav__item {
+  margin-right: 1rem;
+}
