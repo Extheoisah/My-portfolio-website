@@ -121,83 +121,84 @@ nav .social__links .nav__list {
 /* === About Section === */
 section.about {
   position: relative;
-}
-.profile__pic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background-color: var(--pry-clr);
-  overflow: hidden;
-  /* border: 1px solid red; */
-}
-.profile__pic img {
-  /* border: 1px solid red; */
-  height: 90vh;
-}
-
-section.about .description {
-  position: absolute;
-  top: 35%;
-  left: 15%;
-  right: 15%;
-  text-align: center;
-  color: var(--pry-clr);
-}
-
-section.about .description h2 {
-  font-size: calc(var(--fs-big) + 5px);
-  font-weight: 800;
-  color: var(--pry-clr);
-  opacity: 0.85;
-  margin-bottom: 1.5rem;
-  transition: ease-in 0.25s;
-}
-
-section.about .description p {
-  font-size: calc(var(--normal-font-size) + 6px);
-  font-weight: 700;
-  text-transform: capitalize;
-  color: var(--btn-clr);
-  background-color: var(--pry-clr);
-  opacity: 0.85;
-  margin-bottom: 2rem;
-  border: none;
-  /* border-radius: 6px; */
-  outline: none;
-  transition: ease-in-out 1s;
-}
-
-section.about .description .link {
+  /* top: 5rem; */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  transition: all 0.5s ease-in;
 }
 
-section.about .description .link a {
+.profile__pic {
+  width: 300px;
+  height: 300px;
+  margin-top: 2rem;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.75rem 0.5rem;
+  /* border: 1px solid red; */
+  order: 2;
 }
 
-section.about .description .link .more {
-  background-color: var(--pry-clr);
+.profile__pic img {
+  width: 400px;
+  height: 400px;
+  border: 1px solid green;
+}
+
+.description {
+  order: 1;
+  margin-top: 3rem;
+  text-align: left;
+  transition: all 1s ease-in-out;
+}
+
+.description h2 {
+  letter-spacing: 3px;
+  font-size: var(--fs-big);
+}
+
+.description p {
+  letter-spacing: 1px;
+  font-size: var(--fs-big);
+  font-weight: 700;
+}
+
+.description p span {
   color: var(--btn-clr);
-  font-weight: 600;
 }
 
-section.about .description .link .hire {
-  background-color: var(--cedar-chest);
+.description .link {
+  margin: 2.5rem 0 0 0;
+  transition: 1.5s ease-in;
+}
+
+.description .link .hire {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  background-color: var(--btn-clr);
   color: var(--white);
-  font-weight: 600;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.fa-angle-double-right {
-  margin-left: 0.5rem;
-  font-size: var(--small-font-size);
-  /* font-weight: 400; */
+.description .link .hire .fab {
+  color: var(--pry-clr);
+  padding-left: 0.5rem;
+}
+
+.description .link .hire:hover,
+.description .link .hire:focus {
+  background-color: transparent;
+  color: var(--btn-clr);
+  border: 2px solid var(--btn-clr);
+}
+
+.description .link .hire .fab:hover {
+  color: var(--btn-clr);
 }
 
 /* === MEDIA QUERIES === */
@@ -266,5 +267,15 @@ section.about .description .link .hire {
   .active {
     border-bottom: 2px solid var(--btn-clr);
     transition: all ease-in-out 0.2s;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  section.about {
+    margin-top: 4rem;
+  }
+
+  .description {
+    padding: 0 1.5rem;
   }
 }
