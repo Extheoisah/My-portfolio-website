@@ -188,6 +188,7 @@ article.intro .description p {
   );
   background-size: 100%;
   background-clip: text;
+  -webkit-background-clip: text;
   text-transform: uppercase;
   text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
     #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
@@ -215,6 +216,7 @@ article.intro .description span {
     );
     background-size: 100%;
     background-clip: text;
+    -webkit-background-clip: text;
     cursor: pointer;
   }
 }
