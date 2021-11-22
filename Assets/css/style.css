@@ -23,9 +23,10 @@
   --z-fixed: 100;
 
   /* === Colors === */
+  --random: #020024;
   --white: #fff;
   --pry-clr: #fbdbb4;
-  --btn-clr: #1f3469da;
+  --btn-clr: rgba(31, 52, 105, 0.855);
   --accent-clr: #7daa92;
   --accent-2: #bd9e7f;
   --cedar-chest: #d04e42;
@@ -145,6 +146,137 @@ nav div.contact a:focus {
 /* ============ 
   About Section 
   ============= */
+section.home {
+  background: rgb(31, 52, 105);
+  background: linear-gradient(
+    139deg,
+    rgba(31, 52, 105, 1) 0%,
+    rgba(31, 52, 105, 0.85) 47%
+  );
+  color: var(--white);
+  margin-top: calc(2 * var(--header-height));
+  padding-bottom: 3rem;
+  /* height: 100vh; */
+}
+
+section.home article {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+article.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20%;
+}
+
+article.intro .profile__pic img {
+  outline: 2px solid white;
+  outline-offset: 0.5rem;
+  border-radius: 50%;
+}
+
+article.intro .description p {
+  color: transparent;
+  font-weight: 900;
+  color: rgb(163, 178, 216);
+  background: linear-gradient(
+    90deg,
+    rgb(163, 178, 216) 30%,
+    rgba(124, 199, 195, 0.85) 47%
+  );
+  background-size: 100%;
+  background-clip: text;
+  text-transform: uppercase;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+    #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+    #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+article.intro .description span {
+  text-transform: uppercase;
+  transition: 1s ease-in-out;
+  animation: effect 5s ease-in-out infinite;
+}
+
+@keyframes effect {
+  0% {
+    color: white;
+  }
+
+  100% {
+    color: transparent;
+    background: linear-gradient(
+      90deg,
+      rgb(144, 165, 219) 30%,
+      rgba(124, 199, 195, 0.85) 47%
+    );
+    background-size: 100%;
+    background-clip: text;
+    cursor: pointer;
+  }
+}
+
+article.intro .description span:hover {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    rgb(144, 165, 219) 30%,
+    rgba(124, 199, 195, 0.85) 47%
+  );
+  background-size: 100%;
+  background-clip: text;
+  cursor: pointer;
+}
+
+article.intro .description h1,
+article.intro .description h2 {
+  font-size: 4rem;
+}
+
+article.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 9rem;
+  padding-bottom: var(--header-height);
+}
+
+article.details div p:nth-child(1) {
+  font-size: 1.15rem;
+  padding-bottom: 1rem;
+}
+
+article.details div p:nth-child(2) {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+article.details .mail a {
+  position: relative;
+  color: var(--white);
+}
+
+article.details .mail a::after {
+  content: "\f2b6";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2rem;
+  position: absolute;
+  top: -140%;
+  right: -80px;
+  padding: 1rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+article.details .mail a:hover {
+  color: var(--accent-clr);
+}
 
 /* ========= 
   MEDIA QUERIES 
