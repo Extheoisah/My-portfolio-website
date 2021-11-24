@@ -162,6 +162,8 @@ section.home {
 section.home article {
   max-width: 1024px;
   margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 article.intro {
@@ -265,11 +267,11 @@ article.details .mail a::after {
   content: "\f2b6";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
-  top: -140%;
-  right: -80px;
-  padding: 1rem;
+  top: -150%;
+  right: 0px;
+  padding: 0.75rem;
   border: 2px solid var(--white);
   border-radius: 50%;
   cursor: pointer;
@@ -352,6 +354,77 @@ article.details .mail a:hover {
     display: block;
     margin: 1rem;
   }
+
+  /* About Section */
+  section.home article {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  article.intro .profile__pic img {
+    outline-offset: 0.3rem;
+  }
+
+  article.intro .description p {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  article.intro .description h1,
+  article.intro .description h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  article.details {
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+
+  article.details div p:nth-child(1) {
+    font-size: 1.35rem;
+    padding-bottom: 0.5rem;
+  }
+
+  article.details div p:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  article.details .mail a::after {
+    right: -50px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  /* About Section */
+  article.intro {
+    display: inline-block;
+  }
+
+  article.intro .profile__pic {
+    margin-bottom: 2rem;
+  }
+
+  article.intro .profile__pic img {
+    width: 130px;
+    height: 130px;
+  }
+
+  article.intro .description h1,
+  article.intro .description h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  article.details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -360,9 +433,9 @@ article.details .mail a:hover {
     transition: linear ease-in-out 0.2s;
   }
 }
-
+/* 
 @media screen and (max-width: 360px) {
   section.home {
     margin-top: 4rem;
   }
-}
+} */
