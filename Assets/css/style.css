@@ -388,6 +388,109 @@ article .stack p:hover {
   border-radius: 4px;
 }
 
+/* ============== 
+  PROJECT SECTION 
+  =============== */
+section.projects {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 5rem;
+}
+
+section.projects h2 {
+  color: var(--btn-clr);
+  font-size: clamp(1rem, 7vmin, 3rem);
+  padding: 3rem 0;
+}
+
+article.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 0.5rem;
+  padding: 1rem;
+  width: fit-content;
+  box-shadow: var(--box-shadow);
+}
+
+article.project-card h3 {
+  color: var(--random);
+  padding: 1rem;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+article.project-card h3:hover {
+  color: var(--white);
+  background-color: var(--btn-clr);
+  border-radius: 50px;
+}
+
+article.project-card .project-img {
+  width: 400px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+article.project-card .project-img img {
+  width: 400px;
+  height: 250px;
+}
+
+article.project-card .footer {
+  transition: 0.5s ease-in-out;
+}
+
+article.project-card .footer:hover,
+article.project-card .footer:focus-visible {
+  border-top: 2px solid var(--btn-clr);
+  border-radius: 6px;
+  padding-top: 0.75rem;
+}
+
+article.project-card .footer .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+article.project-card .footer .title p,
+article.project-card .footer .title a {
+  color: var(--random);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+article.project-card .footer .title p:hover,
+article.project-card .footer .title p:focus,
+article.project-card .footer .title a:hover,
+article.project-card .footer .title a:focus {
+  border-bottom: 1px solid var(--accent-clr);
+}
+
+article.project-card .footer .title p i,
+article.project-card .footer .title a i {
+  color: var(--accent-clr);
+  opacity: 0.6;
+}
+
+article.project-card .footer .title p i:hover,
+article.project-card .footer .title p i:focus,
+article.project-card .footer .title a i:hover,
+article.project-card .footer .title a i:focus {
+  opacity: 1;
+}
+
 /* ========= 
   MEDIA QUERIES 
   ========== */
