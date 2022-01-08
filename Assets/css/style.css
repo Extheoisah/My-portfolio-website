@@ -477,6 +477,7 @@ article.project-card .project-img {
 article.project-card .project-img img {
   width: clamp(260px, 70vw, 400px);
   height: 250px;
+  background: cover;
 }
 
 article.project-card .footer {
